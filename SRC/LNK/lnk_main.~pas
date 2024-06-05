@@ -1,0 +1,115 @@
+unit lnk_main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, OLE2, shlobj;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    Edit1: TEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    SL :  IShellLink;
+    PF :  IPersistFile;
+    { Public declarations }
+    procedure Abort(s: string);
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.DFM}
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+Hres : integer;
+begin
+   CoInitialize(nil); // инициализировать OLE
+   Hres := COCreateInstance(CLSID_ShellLink,  nil, CLSCTX_INPROC_SERVER,
+   IID_IShellLinkw, SL);
+   If  Succeeded(HRes)  Then   Begin
+      // Проверим IShellLink  на наличие интерфейса  IPersistFile
+      // для сохранения ярлыка
+      HRes:= SL.OueryInterface(IID_IPersistFile, PF);
+      If  Succeeded(HRes) Then  Begin
+         SL.SetDescriptuon(' Shall Link Demo');
+         PF.Save(' d: \windows\deskTop\linkdemo.lnk', True);
+      end;
+   end;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+   var
+     sPath : Array[0..MAX_PATH-1] of Char;
+     Path  : String;
+     HRes  : HRESULT;          // Разультат выполнения OLE- функций
+     SL    : IShellLink;       // интерфейс ShellLink
+     PF    : IPersistFile;     // интерфейс PeralatFtle
+   Begin
+
+   // Лодготовительная работа: находим каталог, а котором расположена
+   // Windows, и формируем маршрут к каталогу  WINDONS/DESKTOP, где
+   // хранятся ярлыки, отображаемые в рабочей области
+
+   GetWindowsDirectory( sPath, MAX_FAT);
+   Path := StrPas(sPath);
+   Path := Path + '\Descktop\';
+   Edit1.Text := Path;
+
+   // Инициалиэируем OLE
+
+   CoInitialize(Nil);
+   Hres := COCreateInstance (CLSID_ShellLink,  nil, CLSCTX_INPROC_SERVER,
+         IID_IShellLinkw, SL);
+   If Succeeded(HRes) Then
+   begin
+
+   // Проверим IShellLink на наличие интерфейса IPersistFile
+   // для cохранения ярлыка
+
+   HRes:= SL.QueryInterface(IID_IPersistFile, PF);
+   If Succeeded(HRes) Then
+   Begin
+   // Содержимое ярлыка
+
+   HRes := SL.SetPatn('d:\windows\notepad.exe');
+   If Not(Succeeded(HRes)) Then Abort('Ошибка ShellLink.SatPath');
+   // Задать аргументы
+
+   HRes:= SL.SetArguments('с:\autoexec.bat');
+   If Not(Succeeded(Hres)) Then
+
+   Abort('Ошибка ShallLink.SetArguments');
+
+   // Текст ярлыка
+
+   Hres:=SL.SetDescription('Shell Link Demo');
+   If Not(Succeeded(HRes)) Then Abort('Ошибка ShellLink.SetDesc');
+   // Coxраним ярлык
+
+   Hres:= PF.Save('d:\windows\desctop\linkdemo.lnk', True);
+    Abort (' Ошибка PersistFile.Save');
+   // Освободим память и зakpoем интерфейсы
+   PF.Release;
+   SL.Release;
+
+   End Else Abort('Oшибка инициализации PersistFile');
+   End Else Abort('Ошибка ииициалиэации ShellLink');
+end;
+
+procedure TForm1.Abort(s: string);
+begin
+   // К сожалению, что-то не так...
+   MessageDlg(Edit1.Text, mtError,[mbOk],0);
+   Close;
+end;
+
+end.
