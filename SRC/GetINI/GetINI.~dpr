@@ -58,7 +58,7 @@ begin
     { ParamStr(2) - <Section> }
     { ParamStr(3) - <parameter> }
     if not (ParamCount in [1..3]) then begin
-        WriteLN('SETINI: setini <ini_file> <Section> <parameter>');
+        WriteLN('GETINI: setini <ini_file> <Section> <parameter>');
         end
     else begin
         GINIFileName := SysUtils.ExpandFileName(Paramstr(1));

@@ -48,7 +48,8 @@ begin
     GINIFile.ReadSections(LSections);
     for j:=0 to LSections.Count-1 do begin
         LSection := LSections.Strings[j];
-        CheckSection (LSection);
+        // CheckSection (LSection);
+        WriteLN (LSection);
     end;
     LSections.Free;
 end;

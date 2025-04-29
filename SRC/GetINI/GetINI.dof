@@ -100,7 +100,7 @@ Conditionals=
 DebugSourceDirs=
 UsePackages=0
 [Parameters]
-RunParams=pyproject.toml tool.poetry
+RunParams=D:\PROJECTS_LYR\CHECK_LIST\PROJECTS.ini
 HostApplication=
 Launcher=
 UseLauncher=0
