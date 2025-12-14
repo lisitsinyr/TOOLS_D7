@@ -39,9 +39,9 @@ BottomPanelData=00000400010000000B0000004D65737361676556696577000000000000000000
 
 [View0]
 Module=D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\TOOLS_D7\SRC\GetINI\GetINI.dpr
-CursorX=24
-CursorY=60
-TopLine=42
+CursorX=1
+CursorY=21
+TopLine=4
 LeftCol=1
 
 [Watches]
@@ -66,7 +66,8 @@ LRDockWidth=468
 Dockable=1
 
 [Breakpoints]
-Count=0
+Count=1
+Breakpoint0='D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\TOOLS_D7\SRC\GetINI\GetINI.dpr',20,'',0,1,'',1,0,0,'',1,'','',''
 
 [AddressBreakpoints]
 Count=0
