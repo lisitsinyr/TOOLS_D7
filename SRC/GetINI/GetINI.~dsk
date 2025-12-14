@@ -1,9 +1,9 @@
 [Modules]
-Module0=D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\PROJECTS_D7\TOOLS_D7\SRC\GetINI\GetINI.dpr
+Module0=D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\TOOLS_D7\SRC\GetINI\GetINI.dpr
 Count=1
 EditWindowCount=1
 
-[D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\PROJECTS_D7\TOOLS_D7\SRC\GetINI\GetINI.dpr]
+[D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\TOOLS_D7\SRC\GetINI\GetINI.dpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
@@ -20,17 +20,15 @@ CodeExplorer=CodeExplorer@EditWindow0
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
-State=2
+State=0
 Left=200
 Top=148
 Width=1139
-Height=760
-MaxLeft=-8
-MaxTop=115
-MaxWidth=1656
-MaxHeight=842
-ClientWidth=1640
-ClientHeight=803
+Height=663
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=1123
+ClientHeight=624
 LeftPanelSize=140
 LeftPanelClients=CodeExplorer@EditWindow0
 LeftPanelData=000004000000000000000000000000000000000000000000000100000000000000000C000000436F64654578706C6F726572FFFFFFFF
@@ -40,10 +38,10 @@ BottomPanelClients=MessageView@EditWindow0
 BottomPanelData=00000400010000000B0000004D657373616765566965770000000000000000000000000000000000FFFFFFFF
 
 [View0]
-Module=D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\PROJECTS_D7\TOOLS_D7\SRC\GetINI\GetINI.dpr
-CursorX=114
-CursorY=43
-TopLine=37
+Module=D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\TOOLS_D7\SRC\GetINI\GetINI.dpr
+CursorX=39
+CursorY=16
+TopLine=1
 LeftCol=1
 
 [Watches]
@@ -141,11 +139,11 @@ State=0
 Left=0
 Top=12
 Width=140
-Height=831
+Height=612
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=140
-ClientHeight=831
+ClientHeight=612
 TBDockHeight=305
 LRDockWidth=140
 Dockable=1
