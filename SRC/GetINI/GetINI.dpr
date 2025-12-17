@@ -5,7 +5,8 @@ program GetINI;
 {$R *.res}
 
 uses
-    Classes, SysUtils, IniFiles;
+    Classes, SysUtils, IniFiles,
+    LUSupport;
 
 var
     GIniFileName: string;
