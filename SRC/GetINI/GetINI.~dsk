@@ -20,20 +20,18 @@ CodeExplorer=CodeExplorer@EditWindow0
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
-State=2
+State=0
 Left=200
 Top=148
 Width=1139
 Height=663
 MaxLeft=-8
 MaxTop=115
-MaxWidth=1656
-MaxHeight=842
-ClientWidth=1640
-ClientHeight=803
+ClientWidth=1123
+ClientHeight=624
 LeftPanelSize=140
-LeftPanelClients=CodeExplorer@EditWindow0
-LeftPanelData=000004000000000000000000000000000000000000000000000100000000000000000C000000436F64654578706C6F726572FFFFFFFF
+LeftPanelClients=CodeExplorer@EditWindow0,ProjectManager
+LeftPanelData=00000400000000007002000000000000018C000000000000000100000000380100001200000050726F6A6563744D616E61676572466F726D0100000000700200000C000000436F64654578706C6F726572FFFFFFFF
 RightPanelSize=0
 BottomPanelSize=0
 BottomPanelClients=MessageView@EditWindow0
@@ -41,9 +39,9 @@ BottomPanelData=00000400010000000B0000004D65737361676556696577000000000000000000
 
 [View0]
 Module=D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\TOOLS_D7\SRC\GetINI\GetINI.dpr
-CursorX=34
-CursorY=68
-TopLine=49
+CursorX=42
+CursorY=15
+TopLine=1
 LeftCol=1
 
 [Watches]
@@ -69,7 +67,7 @@ Dockable=1
 
 [Breakpoints]
 Count=1
-Breakpoint0='D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\TOOLS_D7\SRC\GetINI\GetINI.dpr',20,'',0,1,'',1,0,0,'',1,'','',''
+Breakpoint0='D:\PROJECTS_LYR\CHECK_LIST\DESKTOP\Pascal_Delphi\Delphi_7\TOOLS_D7\SRC\GetINI\GetINI.dpr',21,'',0,1,'',1,0,0,'',1,'','',''
 
 [AddressBreakpoints]
 Count=0
@@ -89,18 +87,18 @@ ClientHeight=84
 
 [ProjectManager]
 Create=1
-Visible=0
+Visible=1
 State=0
-Left=369
-Top=372
-Width=446
-Height=318
+Left=0
+Top=12
+Width=140
+Height=296
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=430
-ClientHeight=279
+ClientWidth=140
+ClientHeight=296
 TBDockHeight=318
-LRDockWidth=446
+LRDockWidth=140
 Dockable=1
 
 [CPUWindow]
@@ -325,13 +323,13 @@ Create=1
 Visible=1
 State=0
 Left=0
-Top=12
+Top=324
 Width=140
-Height=791
+Height=300
 MaxLeft=-1
 MaxTop=-1
 ClientWidth=140
-ClientHeight=791
+ClientHeight=300
 TBDockHeight=305
 LRDockWidth=140
 Dockable=1
